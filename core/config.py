@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     DEBUG: bool = False
     DATABASE_URL: Optional[str] = None 
     ALLOWED_ORIGINS: str = ""
-    OPENAI_API_KEY: str = None  # gör den optional, annars får du fel när env-variabeln saknas
+    OPENAI_API_KEY: str = None  
 
     @field_validator("ALLOWED_ORIGINS")
     def parse_allowed_origins(cls, v: str) -> List[str]:
